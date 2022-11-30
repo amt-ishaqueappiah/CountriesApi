@@ -82,7 +82,57 @@ body{
     column-gap: 4.3vw;
     grid-template-columns: repeat(4,19vw); 
   }
+
+  /* country page styling desktop*/
+
+  .Details{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+  }
+
+  .sub-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .border-countries{
+    gap: 1em;
+    grid-column: 2/-1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box{
+    width: 0.2em;
+    padding: 0 3vw;
+    height: fit-content;
+  }
+  .border-header{
+    width: 9vw;
+    font-size: 1vw;
+  }
+  .rightDetails{
+ background-color: green;
+
+  }
+
+  .backFlag{
+    width: 90%;
+  }
+
+  .backFlag img{
+    border-radius: 10px;
+  }
 }
+
+
+
+
+
+
 
 @media (max-width:300px){
   .search input{

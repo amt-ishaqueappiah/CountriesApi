@@ -18,7 +18,7 @@ const Details = (props:DetailsProp) => {
     <div className="backFlag">
         <img src={`${props.Img}`} alt="" />
     </div>
-
+    <div className="sub-details">
     <div className="leftDetails">
         <h4>{props.Name}</h4>
         <p>Native Name:{props.Native}</p>
@@ -40,6 +40,7 @@ const Details = (props:DetailsProp) => {
       {props.Borders?.map(item=>{
         return  <p key={item} className='box'>{item}</p>
       })}
+    </div>
     </div>
 
     </div>
