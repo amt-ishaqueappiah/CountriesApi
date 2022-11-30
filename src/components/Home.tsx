@@ -31,8 +31,9 @@ const Home = () => {
   const allCountries:any = countries.map(country=>{
 
     return  <Card 
-      key={country.cca2} 
-      Name={country.name.common}
+      key={country.alpha3Code} 
+      Countries={country}
+      Name={country.name}
        Flag={country.flags.png} 
        Region={country.region} 
        Population={country.population}
@@ -59,11 +60,8 @@ const Home = () => {
       <Filter OnSelect={getCountryByRegion}/>
       </div>
       <div className="bottom">
-
        {allCountries}
-
       </div>
-      
     </div>
   )
 }

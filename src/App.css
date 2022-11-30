@@ -101,3 +101,59 @@ ul{
   position: absolute;
   background-color: white;
 }
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Back page styling*/
+
+.backBtn{
+  padding:0.3em 3.1em;
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+  width:4.3rem;
+  border-style: none;
+  margin-top: 8vw;
+  margin-left: 2em;
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+ 
+}
+
+.Details{
+  margin-top: 14vw;
+margin-left: 2em;
+margin-right: 2em;
+}
+.country{
+  
+  text-decoration: none;
+      color: inherit;
+}
+
+.backFlag img{
+  width: 100%;
+}
+
+.border-countries{
+  display: grid;
+ grid-template-columns: repeat(auto-fit,24vw);
+ row-gap: 1em;
+  justify-content: space-between;
+}
+
+.border-header{
+ grid-column: 1/-1;
+}
+
+.box{
+  text-align: center;
+  width: fit-content;
+  padding: 0 5vw;
+  height: 7vw;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import {Routes,Route} from 'react-router-dom'
 import Home from './components/Home'
+import Country from './components/Country'
 
 function App () {
 
@@ -11,6 +12,7 @@ function App () {
      <NavBar />
      <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/alpha/:code' element={<Country/>}/>
      </Routes>
       </div>
   )

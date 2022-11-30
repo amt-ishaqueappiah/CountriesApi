@@ -1,3 +1,3 @@
 
 
-export const apiUrl ="https://restcountries.com/v3.1";
+export const apiUrl ="https://restcountries.com/v2";

@@ -1,5 +1,9 @@
+import {Link} from 'react-router-dom';
+
+
 
 interface Props{
+    Countries:any;
     Name:string;
     Flag:string;
     Population:string;
@@ -10,6 +14,7 @@ interface Props{
 
 const Card = (props:Props) => {
   return (
+    <Link to={`/alpha/${props.Countries.alpha3Code}`} className='link'>
     <div className="card">
         <img src={props.Flag} alt="" />
         <div className="details">
@@ -22,6 +27,7 @@ const Card = (props:Props) => {
         </div>
       
     </div>
+    </Link>
   )
 }
 
