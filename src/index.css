@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+  font-family: 'Nunito Sans', sans-serif;
+
+
+}
+body{
+  background: #fafafa;
+}
+
+
+
+@media (min-width:500px){
+  .home{
+      display: grid;
+      justify-content: center;
+
+  }
+  .top{
+    margin-top: 3vw;
+    grid-column: 1/-1;
+    display: grid; 
+    column-gap: 20.5vw;
+  }
+  .search{
+    margin-top: 0;
+    grid-column:1/2;
+  }
+.filter{
+  position: relative;
+  margin-top: 0;
+  grid-column: 3/4;
+ 
+}
+.filter.active .content{
+  position:absolute;
+
+  
+}
+  .select ,.options{
+    width: 15vw;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  .options{
+    margin-top: 0.5em;
+  }
+  .options li{
+    height: 2vw;
+  }
+  .search input{
+    display: flex;
+    justify-items: center;
+    width: 33vw;
+    height: 4vw;
+    border-radius: 7px;
+  }
+
+  .search-btn{
+    left:0;
+    margin-left: 2vw;
+    justify-items: center;
+   }
+  
+  ::placeholder{
+    font-size: 1.1vw;
+  }
+  .card{
+    width: 20vw;
+    height:24vw;
+    border-radius: 5px;
+    background-color: aqua;
+    margin-top: 3vw;
+  } 
+  .bottom{
+    display: grid;
+    column-gap: 3vw;
+    grid-template-columns: repeat(4,20vw); 
+  }
+}
+
+@media (max-width:300px){
+  .search input{
+    width: 90%;
+    margin: auto;
+    padding: 1em 5em
+  }
+  
+  .filter{
+    margin: 0 0.8em;
+    margin-top: 1rem;
+  }
+
+  .filter .select{
+    font-size: 0.8rem;
+  }
+}

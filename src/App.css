@@ -1,0 +1,103 @@
+
+
+.Nav{
+  display: flex;
+  color: black;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  padding:2rem 2vw;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.home{
+  display: grid;
+  justify-items: center;
+}
+ .card{
+  margin-top: 7vw;
+  width: 74vw;
+  height:90vw ;
+  border-radius: 5px;
+  background-color: aqua;
+  overflow: hidden;
+  cursor: pointer;
+} 
+
+.card img{
+  width: 100%;
+ 
+}
+
+.search{
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.search input{
+  width: 85vw;
+  padding: 1em 6em;
+  border-style: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  
+}
+.search-btn{
+ position: absolute;
+ left:0;
+ margin-left: 10vw;
+ align-self: center;
+ color: #c4c4c4;
+ cursor: pointer;
+
+}
+::placeholder{
+  font-size: 3vw;
+  color: #c4c4c4;
+}
+.filter{
+  position: relative;
+  margin-top: 5vw;
+}
+
+.select{
+  align-items: center;
+  height: 55px;
+  width: 58vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 7px;
+  padding: 0 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.content{
+  display: none;
+  border-radius: 7px;
+}
+
+.filter.active .content{
+  display: block;
+}
+ul{
+  padding-top:1.5em ;
+  padding-bottom: 1em;
+  padding-left: 1rem;
+}
+.options li{
+  height: 8vw;
+  cursor: pointer;
+  list-style: none;
+ 
+}
+
+.options{
+  border-radius: 5px;
+  width: 58vw;
+  margin-top: 0.5em;
+  position: absolute;
+  background-color: white;
+}
