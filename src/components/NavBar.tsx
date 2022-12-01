@@ -1,10 +1,30 @@
+import { style } from '@mui/system';
 import path from '../assets/Path.png'
 
-const NavBar:React.FC = () => {
+interface NavProps{
+  Dark:boolean;
+  SetDark:any;
+}
+
+const NavBar = (props:NavProps) => {
+  
+
+  const changeColor =()=>{
+    props.SetDark(!props.Dark)
+    if(props.Dark){
+      console.log('not dark')
+      document.body.style.backgroundColor=' #fafafa'
+  }
+  else{
+    console.log('dark')
+    document.body.style.backgroundColor='#202C36'
+
+  }
+  }
   return (
-    <nav className="Nav">
+    <nav className="Nav" style={props.Dark?{backgroundColor:'#2B3844',color:'white'}:{}}>
      <h4>Where in the world?</h4>
-     <p className="dark-btn"><img src={path}></img>Dark Mode</p>
+     <p className="dark-btn" onClick={changeColor}><img src={path}></img>Dark Mode</p>
     </nav>
   )
 }

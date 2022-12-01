@@ -25,10 +25,7 @@ body{
     display: grid; 
     column-gap: 20.5vw;
   }
-  .search{
-    margin-top: 0;
-    grid-column:1/2;
-  }
+ 
 .filter{
   position: relative;
   margin-top: 0;
@@ -37,42 +34,56 @@ body{
 }
 .filter.active .content{
   position:absolute;
-
-  
 }
-  .select ,.options{
-    width: 15vw;
-    font-size: 0.9em;
-    font-weight: 600;
-  }
+ 
+.filterText{
+  font-size: 1vw;
+  padding-left: 1vw;
+}
+.select-btn{
+  position: absolute;
+  padding-right: 1vw;
+  right: 0;
+}
+.select{
+  display: flex;
+  position: relative;
+  width: 15vw;
+  padding: 1vw 0;
+  border-radius: 5px;
+}
+.search{
+  margin-top: 0;
+}
   .options{
     margin-top: 0.5em;
+    width: 15vw;
   }
   .options li{
     height: 2vw;
+    font-size: 1vw;
   }
+
+
   .search input{
-    display: flex;
-    justify-items: center;
     width: 33vw;
-    height: 4vw;
-    border-radius: 7px;
+    padding: 1vw 0vw;
+
   }
 
   .search-btn{
-    left:0;
-    margin-left: 2vw;
-    justify-items: center;
+    padding: 1vw 0;
+
    }
   
   ::placeholder{
-    font-size: 1.1vw;
+    font-size: 1.2vw;
+    padding-left: 3vw;
   }
   .card{
     width: 19vw;
     height:24vw;
     border-radius: 5px;
-    background-color: aqua;
     margin-top: 3vw;
   } 
 
@@ -100,18 +111,15 @@ body{
   }
 
   .border-countries{
-    gap: 1em;
-    grid-column: 2/-1;
+    margin-top: 3vw;
     display: flex;
     flex-wrap: wrap;
+    
   }
-  .box{
-    width: 0.2em;
-    padding: 0 3vw;
-    height: fit-content;
-  }
+ 
   .border-header{
     width: 9vw;
+    height: fit-content;
     font-size: 1vw;
   }
   .rightDetails{
@@ -120,7 +128,9 @@ body{
   }
 
   .backFlag{
-    width: 90%;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
   }
 
   .backFlag img{
@@ -135,11 +145,7 @@ body{
 
 
 @media (max-width:300px){
-  .search input{
-    width: 90%;
-    margin: auto;
-    padding: 1em 5em
-  }
+ 
   
   .filter{
     margin: 0 0.8em;

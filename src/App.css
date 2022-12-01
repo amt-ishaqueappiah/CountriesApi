@@ -19,9 +19,10 @@
   width: 74vw;
   height:90vw ;
   border-radius: 5px;
-  background-color: aqua;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  
 } 
 
 .card img{
@@ -30,31 +31,24 @@
 }
 
 .search{
-  display: flex;
-  position: relative;
-  margin-top: 2rem;
+  margin-top: 3rem;
+position: relative;
 }
 
 .search input{
-  width: 85vw;
-  padding: 1em 6em;
-  border-style: none;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  width: 90vw;
+  padding: 2vw 0vw;
+  position: relative;
+  
   
 }
 .search-btn{
- position: absolute;
- left:0;
- margin-left: 10vw;
- align-self: center;
- color: #c4c4c4;
- cursor: pointer;
-
+  position: absolute;
+  padding: 2vw 0vw;
+  left: 0;
 }
 ::placeholder{
-  font-size: 3vw;
-  color: #c4c4c4;
+  padding-left: 10vw;
 }
 .filter{
   position: relative;
@@ -62,16 +56,23 @@
 }
 
 .select{
+  position: relative;
+  width: 45vw;
   align-items: center;
-  height: 55px;
-  width: 58vw;
-  display: flex;
-  justify-content: space-between;
+  padding: 3vw 0;
   background-color: white;
-  border-radius: 7px;
-  padding: 0 15px;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.select-btn{
+  position: absolute;
+  padding-right: 3vw;
+  right: 0;
+}
+.filterText{
+  font-size: 3.3vw;
+  padding-left: 5vw;
 }
 
 .content{
@@ -83,20 +84,20 @@
   display: block;
 }
 ul{
-  padding-top:1.5em ;
-  padding-bottom: 1em;
+  padding-top: 2vw;
   padding-left: 1rem;
+  padding-bottom: 1vw;
 }
 .options li{
-  height: 8vw;
+  height: 6.2vw;
   cursor: pointer;
   list-style: none;
- 
+  font-size: 3.5vw;
 }
 
 .options{
+  width: 45vw;
   border-radius: 5px;
-  width: 58vw;
   margin-top: 0.5em;
   position: absolute;
   background-color: white;
@@ -141,8 +142,7 @@ margin-right: 2em;
 
 .border-countries{
   display: grid;
- grid-template-columns: repeat(auto-fit,24vw);
- row-gap: 1em;
+  grid-template-columns: repeat(auto-fit,24vw);
   justify-content: space-between;
 }
 
@@ -151,9 +151,16 @@ margin-right: 2em;
 }
 
 .box{
+  align-self: center;
   text-align: center;
   width: fit-content;
-  padding: 0 5vw;
-  height: 7vw;
+  padding: 0 3vw;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* dark  btn*/
+
+.dark-btn{
+  cursor: pointer;
 }

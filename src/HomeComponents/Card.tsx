@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 
 interface Props{
+    Dark:boolean;
     Countries:any;
     Name:string;
     Flag:string;
@@ -15,7 +16,7 @@ interface Props{
 const Card = (props:Props) => {
   return (
     <Link to={`/alpha/${props.Countries.alpha3Code}`} className='link'>
-    <div className="card">
+    <div className="card" style={props.Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
         <img src={props.Flag} alt="" />
         <div className="details">
            <div className="country">

@@ -35,12 +35,12 @@ const Details = (props:DetailsProp) => {
     </div>
 
 
-    <div className="border-countries">
-      <h3 className="border-header">{props.Borders?'Border Countries:':''}</h3>
-      {props.Borders?.map(item=>{
-        return  <p key={item} className='box'>{item}</p>
-      })}
-    </div>
+      <div className="border-countries">
+        <h3 className="border-header">{props.Borders?'Border Countries:':''}</h3>
+        {props.Borders?.map(item=>{
+          return  <p key={item} className='box'>{item}</p>
+        })}
+      </div>
     </div>
 
     </div>

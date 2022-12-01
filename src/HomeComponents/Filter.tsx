@@ -1,12 +1,19 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {useRef} from 'react'
+import {useRef} from 'react';
 
 interface FilterProps{
     OnSelect:any;
+    Dark:boolean;
 }
 
-const Filter = ({OnSelect}:FilterProps) => {
-    const countries:string[]=['Africa','America','Asia','Europe','Oceania']
+
+
+const style={
+    fontSize:'1.2em',
+    paddingTop:'0.3em'
+}
+const Filter = ({OnSelect,Dark}:FilterProps) => {
+    const countries:string[]=['Africa','Americas','Asia','Europe','Oceania']
     const filt=useRef<HTMLDivElement>(null);
     const firstChild=useRef<HTMLDivElement>(null);
 
@@ -35,15 +42,16 @@ const Filter = ({OnSelect}:FilterProps) => {
     }
    };
 
+
    
   return (
     <div className="filter" ref={filt} onClick={handleToggle}>
-        <div className="select">
-            <span ref={firstChild}>Filter by Region</span>
-            <span className="select-btn"><ExpandMoreIcon/></span>
+        <div className="select" style={Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
+            <span className='filterText' ref={firstChild}>Filter by Region</span>
+            <span className="select-btn"><ExpandMoreIcon style={style}/></span>
         </div>
         <div className="content">
-        <ul className='options'>
+        <ul className='options' style={Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
                 {list}
         </ul>
                

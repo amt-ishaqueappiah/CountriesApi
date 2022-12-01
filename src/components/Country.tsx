@@ -5,7 +5,11 @@ import { useEffect, useState } from 'react';
 import { apiUrl } from '../api';
 
 
-const Country = () => {
+interface countryProps{
+  Dark:boolean;
+}
+
+const Country = (props:countryProps) => {
     const style = { color: "black", fontSize: "1.5em" }
 
     const [country,setCountry] =useState<{name: string; flag: string; nativeName:string;
@@ -47,7 +51,7 @@ const Country = () => {
         
 
   return (
-    <div>
+    <div className='country-container' style={props.Dark?{color:'#fff'}:{}}>
         <Link to='/' className='country'>
         <button className='backBtn'>
             <KeyboardBackspaceIcon style={style} />

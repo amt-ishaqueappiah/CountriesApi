@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "../api";
 
 
+interface homeProps{
+  Dark:boolean;
+}
 
-
-const Home = () => {
+const Home = (props:homeProps) => {
   const [countries, setCountries]=useState<any[]>([]);
 
   const getCountries=async()=>{
@@ -31,6 +33,7 @@ const Home = () => {
   const allCountries:any = countries.map(country=>{
 
     return  <Card 
+      Dark={props.Dark}
       key={country.alpha3Code} 
       Countries={country}
       Name={country.name}
@@ -56,10 +59,10 @@ const Home = () => {
   return (
     <div className="home">
       <div className="top">
-      <Search />
-      <Filter OnSelect={getCountryByRegion}/>
+      <Search Dark={props.Dark} />
+      <Filter OnSelect={getCountryByRegion} Dark={props.Dark}/>
       </div>
-      <div className="bottom">
+      <div className="bottom" >
        {allCountries}
       </div>
     </div>
