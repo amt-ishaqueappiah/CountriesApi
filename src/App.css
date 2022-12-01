@@ -37,20 +37,43 @@ position: relative;
 
 .search input{
   width: 90vw;
-  padding: 2vw 0vw;
+  padding: 3vw 15vw;
   position: relative;
-  
+  border-style: none;
   
 }
+
+.search input:focus{
+  padding-left: 15vw;
+  outline-style: none;
+
+}
+
+input:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+
+.search input.dark::placeholder{
+  color: #fff;
+}
+
+.search input.dark{
+  background-Color:#2B3844;
+  color:white
+}
+
 .search-btn{
   position: absolute;
-  padding: 2vw 0vw;
+  padding: 3vw 0vw;
+  padding-left: 5vw;
   left: 0;
+  color: #B2B2B2;
 }
 ::placeholder{
-  padding-left: 10vw;
+  color: #C4C4C4;
 }
 .filter{
+  width: 45vw;
   position: relative;
   margin-top: 5vw;
 }

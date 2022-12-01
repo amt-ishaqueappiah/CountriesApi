@@ -56,10 +56,22 @@ const Home = (props:homeProps) => {
         console.log('Network Error')
       }
   }
+
+  const getCountryByName=async(countryName:string)=>{
+    try{
+      const res = await fetch(`${apiUrl}/name/${countryName}`)
+      if(!res.ok) throw new Error('country name not found');
+      const data= await res.json()
+      setCountries(data)
+    }
+    catch(err){
+      console.log(err, 'country name error')
+    }
+  }
   return (
     <div className="home">
       <div className="top">
-      <Search Dark={props.Dark} />
+      <Search Dark={props.Dark} OnChange={getCountryByName} />
       <Filter OnSelect={getCountryByRegion} Dark={props.Dark}/>
       </div>
       <div className="bottom" >

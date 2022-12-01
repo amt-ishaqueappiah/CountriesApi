@@ -9,7 +9,7 @@ interface FilterProps{
 
 
 const style={
-    fontSize:'1.2em',
+    fontSize:'1em',
     paddingTop:'0.3em'
 }
 const Filter = ({OnSelect,Dark}:FilterProps) => {

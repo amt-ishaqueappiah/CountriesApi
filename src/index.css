@@ -13,7 +13,7 @@ body{
 
 
 
-@media (min-width:500px){
+@media (min-width:550px){
   .home{
       display: grid;
       justify-content: center;
@@ -30,6 +30,7 @@ body{
   position: relative;
   margin-top: 0;
   grid-column: 3/4;
+  width: 15vw;
  
 }
 .filter.active .content{
@@ -67,19 +68,25 @@ body{
 
   .search input{
     width: 33vw;
-    padding: 1vw 0vw;
+    padding: 1vw 5vw;
 
   }
 
   .search-btn{
     padding: 1vw 0;
+    padding-left: 2vw;
 
    }
   
   ::placeholder{
-    font-size: 1.2vw;
-    padding-left: 3vw;
+    font-size: 1.1vw;
+    padding-left: 1vw;
   }
+
+  .search input:focus{
+    padding-left: 5vw;
+  }
+  
   .card{
     width: 19vw;
     height:24vw;
@@ -122,10 +129,7 @@ body{
     height: fit-content;
     font-size: 1vw;
   }
-  .rightDetails{
- background-color: green;
-
-  }
+ 
 
   .backFlag{
     width: 100%;
@@ -143,16 +147,3 @@ body{
 
 
 
-
-@media (max-width:300px){
- 
-  
-  .filter{
-    margin: 0 0.8em;
-    margin-top: 1rem;
-  }
-
-  .filter .select{
-    font-size: 0.8rem;
-  }
-}
