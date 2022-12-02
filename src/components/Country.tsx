@@ -38,7 +38,6 @@ const Country = (props:countryProps) => {
       const res=await fetch(`${apiUrl}/alpha/${code}`)
       if(!res.ok) throw new Error('Fetching countries Error')
       const country = await res.json()
-      console.log(country)
       setCountry(country)
     }
 

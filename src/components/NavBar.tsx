@@ -24,7 +24,7 @@ const NavBar = (props:NavProps) => {
   return (
     <nav className="Nav" style={props.Dark?{backgroundColor:'#2B3844',color:'white'}:{}}>
      <h4>Where in the world?</h4>
-     <p className="dark-btn" onClick={changeColor}><img src={path}></img>Dark Mode</p>
+     <p className="dark-btn" onClick={changeColor}><img src={path} alt='moon-image'/>Dark Mode</p>
     </nav>
   )
 }

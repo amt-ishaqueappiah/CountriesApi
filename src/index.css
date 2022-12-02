@@ -15,12 +15,12 @@ body{
 @media (min-width:500px){
   .bottom{
     display: grid;
-    grid-template-columns: repeat(2,45vw); 
-    column-gap: 3vw ;
+    grid-template-columns: repeat(2,40vw); 
+    column-gap: 8vw ;
   }
   
   .card{
-    width: 45vw;
+    width: 40vw;
     height: 50vw;
   }
 }

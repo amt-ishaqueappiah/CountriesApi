@@ -16,7 +16,6 @@ const Search = (props:SearchProps) => {
   const inputRef=useRef<HTMLInputElement>(null);
 
   const handleKeyUp=()=>{
-      console.log(inputRef.current?.value)
       let text:string | any =inputRef.current?.value;
       if(text===''){
         text='a'
