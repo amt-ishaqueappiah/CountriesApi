@@ -12,8 +12,21 @@ body{
 }
 
 
+@media (min-width:500px){
+  .bottom{
+    display: grid;
+    grid-template-columns: repeat(2,45vw); 
+    column-gap: 3vw ;
+  }
+  
+  .card{
+    width: 45vw;
+    height: 50vw;
+  }
+}
 
-@media (min-width:550px){
+
+@media (min-width:800px){
   .home{
       display: grid;
       justify-content: center;
@@ -141,8 +154,6 @@ body{
     border-radius: 10px;
   }
 }
-
-
 
 
 
