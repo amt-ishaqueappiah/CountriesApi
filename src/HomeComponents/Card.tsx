@@ -17,14 +17,14 @@ const Card = (props:Props) => {
   return (
     <Link to={`/alpha/${props.Countries.alpha3Code}`} className='link'>
     <div className="card" style={props.Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
-        <img src={props.Flag} alt="" />
-        <div className="details">
+        <div className='card-image-container'><img src={props.Flag} alt="" /></div>
+        <div className="card-details">
            <div className="country-card-Name">
             <h4>{props.Name}</h4>
            </div>
-           <p>Population: {props.Population}</p>
-           <p>Region: {props.Region}</p>
-           <p>Capital: {props.Capital}</p>
+           <p><span className='card-bold-p-text'>Population: </span>{props.Population}</p>
+           <p><span className='card-bold-p-text'>Region: </span>{props.Region}</p>
+           <p><span className='card-bold-p-text'>Capital: </span>{props.Capital}</p>
         </div>
       
     </div>

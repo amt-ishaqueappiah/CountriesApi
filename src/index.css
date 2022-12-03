@@ -32,14 +32,11 @@ body{
   }
   .bottom{
     display: grid;
-    grid-template-columns: repeat(2,40vw); 
-    column-gap: 8vw ;
+    grid-template-columns: repeat(3,25vw); 
+    column-gap: 6vw ;
   }
   
-  .card{
-    width: 40vw;
-    height: 50vw;
-  }
+  
 
   /*back*/
   .info p{
@@ -56,6 +53,39 @@ body{
   .details-country-name{
     font-size: 6vw;
   }
+
+
+  /* card decoration large phones*/
+  .card{
+    width: 25vw;
+    height: 30vw;
+  }
+  .card-image-container{
+    width:  25vw;
+    height: 16vw;
+    margin-bottom: 3vw;
+  }
+
+  .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: stretch;
+  }
+  .country-card-Name>h4{
+    margin-bottom: 0.6vw;
+    line-height: 1;
+    font-size: 2vw;
+  }
+
+  .card-details{
+    padding-left: 1.8vw;
+    padding-bottom: 8vw;
+  }
+  
+  .card-details p{
+    font-size: 1.5vw;
+  }
+
 
 }
 
@@ -250,6 +280,35 @@ body{
   .details-country-name{
     font-size: 32px;
   }
+
+  /*card-styling */
+
+  .card-image-container{
+    width:  19vw;
+    height: 13vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: stretch;
+  }
+  .country-card-Name>h4{
+    margin-bottom: 0.6vw;
+    line-height: 1;
+    font-size: 1.5vw;
+  }
+
+  .card-details{
+    padding-left: 1.8vw;
+    padding-bottom: 8vw;
+  }
+  
+  .card-details p{
+    font-size: 1vw;
+  }
+
 }
 
 
