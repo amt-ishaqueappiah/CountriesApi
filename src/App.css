@@ -258,7 +258,7 @@ margin-bottom: 10vw;
   margin-top: 12vw;
 }
 .details-country-name{
-  font-size: 22px;
+  font-size: 7vw;
   margin-bottom: 4vw;
 }
 
@@ -282,3 +282,4 @@ margin-bottom: 10vw;
   border-radius: 5px;
   object-fit: cover;
 }
+

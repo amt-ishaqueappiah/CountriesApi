@@ -13,7 +13,7 @@ body{
 
 
 @media (min-width:500px){
-
+ 
   .Nav{
     height: 80px;
     color: #111517;
@@ -40,6 +40,23 @@ body{
     width: 40vw;
     height: 50vw;
   }
+
+  /*back*/
+  .info p{
+    font-size: 4vw;
+  }
+
+  .border-header{
+    font-size: 4.2vw;
+  }
+
+  .border-details{
+    font-size: 3.5vw;
+  }
+  .details-country-name{
+    font-size: 6vw;
+  }
+
 }
 
 
@@ -220,6 +237,18 @@ body{
   .backFlag img{
     border-radius: 10px;
     width: 95%;
+  }
+
+  /* text decoration for big screens*/
+  .info p,.border-header{
+    font-size: 16px;
+  }
+
+  .border-details{
+    font-size: 14px;
+  }
+  .details-country-name{
+    font-size: 32px;
   }
 }
 
