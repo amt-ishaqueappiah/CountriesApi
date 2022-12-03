@@ -13,6 +13,23 @@ body{
 
 
 @media (min-width:500px){
+
+  .Nav{
+    height: 80px;
+    color: #111517;
+  }
+  .Nav>p{
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .Nav>h4{
+    font-size: 24px;
+  }
+  
+  .dark-btn>img{
+    width: 16px;
+  }
   .bottom{
     display: grid;
     grid-template-columns: repeat(2,40vw); 
@@ -31,6 +48,10 @@ body{
       display: grid;
       justify-content: center;
 
+  }
+  .Nav{
+    display: flex;
+    align-items: center;
   }
   .top{
     margin-top: 3vw;
@@ -107,51 +128,98 @@ body{
     margin-top: 3vw;
   } 
 
- 
   .bottom{
     display: grid;
     column-gap: 4.3vw;
     grid-template-columns: repeat(4,19vw); 
   }
 
-  /* country page styling desktop*/
+  /* country page styling desktop (back-page)*/
+
+  .country-container{
+    margin: 0 2vw;
+  }
+
+  .backBtn{
+    border-radius: 4px;
+    margin-top: 80px;
+    width: 136px;
+    height: 40px;
+  }
+  .back{
+    font-size: 16px;
+    padding-left: 4px;
+  }
+/* border-fix*/
+  .box{
+    width: 7vw;
+    height: fit-content;
+    line-height: 1;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    padding: 0.3em 0;
+  }
+
+  .border-details{
+    gap: 0.5vw 0.7vw;
+    margin-left: 0.4vw;
+  }
 
   .Details{
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 0;
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    margin-top: 6vw;
   }
+
+  .border-countries >h4{
+    width: 130px;
+    align-self: center;
+    white-space: nowrap;
+  }
+ 
+  .border-countries{
+    display: flex;
+  }
+  .border-header{
+    margin: 0;
+    line-height: 1;
+    font-size:16px;
+    width: 130px;
+  }
+
+
+  /* right-left-back-details-desktop-style*/
 
   .sub-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin: 0;
+    margin-left: 3vw;
   }
 
-  .border-countries{
-    margin-top: 3vw;
-    display: flex;
-    flex-wrap: wrap;
+  .leftDetails{
+    line-height: 2;
+  }
+
+  .rightDetails{
+    margin: 0;
+    line-height: 2;
+  }
+  .details-country-name{
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2vw;
+    font-size: 32px;
+    grid-column: 1/-1;
     
   }
- 
-  .border-header{
-    width: 9vw;
-    height: fit-content;
-    font-size: 1vw;
+  .info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
  
-
-  .backFlag{
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
 
   .backFlag img{
     border-radius: 10px;
+    width: 95%;
   }
 }
 

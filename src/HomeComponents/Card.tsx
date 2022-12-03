@@ -19,7 +19,7 @@ const Card = (props:Props) => {
     <div className="card" style={props.Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
         <img src={props.Flag} alt="" />
         <div className="details">
-           <div className="country">
+           <div className="country-card-Name">
             <h4>{props.Name}</h4>
            </div>
            <p>Population: {props.Population}</p>

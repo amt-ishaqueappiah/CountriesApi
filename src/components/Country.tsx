@@ -10,11 +10,11 @@ interface countryProps{
 }
 
 const Country = (props:countryProps) => {
-    const style = { color: "black", fontSize: "1.5em" }
+    const style = {  fontSize: "1.5em" }
 
     const [country,setCountry] =useState<{name: string; flag: string; nativeName:string;
       population:string; region:string; subregion:string; capital:string; 
-      topLevelDomain:[]; borders:[];
+      topLevelDomain:[];  currencies:{}[]; borders:[]; languages:{}[];
 
 
       }>({
@@ -26,7 +26,18 @@ const Country = (props:countryProps) => {
       subregion:'',
       capital:"",
       topLevelDomain:[],
-      borders:[]
+      borders:[],
+      currencies:[{
+      code:" ",
+      name:"",
+      symbol:""
+      }],
+      languages:[{
+        iso639_1:"",
+        iso639_2:"",
+        name:"",
+        nativeName:""
+      }]
      
 
     });
@@ -50,16 +61,17 @@ const Country = (props:countryProps) => {
         
 
   return (
-    <div className='country-container' style={props.Dark?{color:'#fff'}:{}}>
+    <div className ={props.Dark?'country-container active':'country-container'}>
+      <div className={props.Dark?'backBtn active':'backBtn'}>
         <Link to='/' className='country'>
-        <button className='backBtn'>
             <KeyboardBackspaceIcon style={style} />
           <span className='back'>Back</span>  
-            </button>
         </Link>
+      </div>
         <Details Name={country.name} Img={country.flag} Native={country.nativeName}
           Population={country.population} Region={country.region} SubRegion={country.subregion}
-          Capital={country.capital} TopLevel={country.topLevelDomain}  Borders={country.borders}
+          Capital={country.capital} TopLevel={country.topLevelDomain}  Currency={country.currencies} 
+          Languages={country.languages} Borders={country.borders} Dark={props.Dark}
         />
     </div>
   )

@@ -8,7 +8,10 @@ interface DetailsProp{
   SubRegion:string;
   Capital:string;
   TopLevel:[];
-  Borders:[]
+  Borders:[];
+  Currency:{}[];
+  Languages:{}[];
+  Dark:boolean;
   
 }
 
@@ -19,28 +22,46 @@ const Details = (props:DetailsProp) => {
         <img src={`${props.Img}`} alt="" />
     </div>
     <div className="sub-details">
-    <div className="leftDetails">
-        <h4>{props.Name}</h4>
-        <p>Native Name:{props.Native}</p>
-        <p>Population:{props.Population}</p>
-        <p>Region:{props.Region}</p>
-        <p>Sub Region:{props.SubRegion}</p>
-        <p>Capital:{props.Capital}</p>
-    </div>
-
-    <div className="rightDetails">
-        <p>Top Level Domain:{props.TopLevel}</p>
-        <p>Currencies:</p>
-        <p>Languages</p>
-    </div>
-
-
-      <div className="border-countries">
-        <h3 className="border-header">{props.Borders?'Border Countries:':''}</h3>
-        {props.Borders?.map(item=>{
-          return  <p key={item} className='box'>{item}</p>
-        })}
+      <div className="info">
+      <h4 className="details-country-name"> {props.Name}</h4>
+      <div className="leftDetails">
+          
+          <p><span className="details-text-bold">Native Name:</span> {props.Native}</p>
+          <p><span className="details-text-bold">Population:</span> {props.Population}</p>
+          <p><span className="details-text-bold">Region:</span> {props.Region}</p>
+          <p><span className="details-text-bold">Sub Region:</span> {props.SubRegion}</p>
+          <p><span className="details-text-bold">Capital:</span> {props.Capital || 'no capital found'}</p>
       </div>
+
+        <div className="rightDetails">
+          <p><span className="details-text-bold">Top Level Domain:</span> {props.TopLevel}</p>
+        
+          <p><span className="details-text-bold">Currencies:</span> {props.Currency?.map((item:any)=>{
+            if(item===undefined || item.name===''){
+              return '';
+            }
+            return item.name;
+          })}</p>
+
+          <p><span className="details-text-bold">Languages:</span> {props.Languages?.map((lan:any)=>{
+            if(lan===undefined || lan.name===''){
+             return '';
+          } 
+          return lan.name
+          }).join(', ')}</p>
+        </div>
+        </div>
+
+        <div className="border-countries">
+            <h4 className="border-header">{props.Borders?'Border Countries:':'No Border Countries'}</h4>
+            <div className="border-details">
+              {props.Borders?.map(item=>{
+                return  item
+                }).map((border,index)=>{
+                  return <p key={index} className={props.Dark? 'box active':'box'}>{border}</p>
+                })}
+            </div>
+        </div>
     </div>
 
     </div>

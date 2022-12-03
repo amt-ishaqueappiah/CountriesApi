@@ -12,11 +12,9 @@ const NavBar = (props:NavProps) => {
   const changeColor =()=>{
     props.SetDark(!props.Dark)
     if(props.Dark){
-      console.log('not dark')
       document.body.style.backgroundColor=' #fafafa'
   }
   else{
-    console.log('dark')
     document.body.style.backgroundColor='#202C36'
 
   }
