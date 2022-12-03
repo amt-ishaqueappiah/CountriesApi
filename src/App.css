@@ -53,6 +53,7 @@ desktop styling can be found in index.css
 
 .card-details{
   padding-left: 5vw;
+  padding-right: 5vw;
   padding-bottom: 5vw;
   line-height: 1.5;
 }
