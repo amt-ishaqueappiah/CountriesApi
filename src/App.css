@@ -42,6 +42,7 @@ desktop styling can be found in index.css
   width: 74vw;
   height: 45vw;
   margin-bottom: 10vw;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 .card img{
@@ -69,9 +70,13 @@ desktop styling can be found in index.css
 }
 /**/
 .search{
-  margin-top: 3rem;
+margin-top: 3rem;
+width: fit-content;
+height: fit-content;
 position: relative;
+border-radius: 5px;
 box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+overflow: hidden;
 
 }
 
@@ -119,22 +124,27 @@ input:focus::-webkit-input-placeholder{
 }
 
 .select{
+  display: flex;
   position: relative;
   width: 45vw;
-  align-items: center;
-  padding: 3vw 0;
+  padding: 3vw 0vw;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
+  align-items: center;
 }
 
 .select-btn{
+  width: fit-content;
+  height: fit-content;
   position: absolute;
-  padding-right: 3vw;
   right: 0;
+  font-size: 4vw;
+  padding-right: 3vw;
+
 }
 .filterText{
-  font-size: 3.3vw;
+  font-size: 3vw;
   padding-left: 5vw;
 }
 
@@ -148,14 +158,14 @@ input:focus::-webkit-input-placeholder{
 }
 ul{
   padding-top: 2vw;
-  padding-left: 1rem;
+  padding-left: 1.4rem;
   padding-bottom: 1vw;
 }
 .options li{
   height: 6.2vw;
   cursor: pointer;
   list-style: none;
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 .options{

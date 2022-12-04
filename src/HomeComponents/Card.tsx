@@ -15,20 +15,21 @@ interface Props{
 
 const Card = (props:Props) => {
   return (
-    <Link to={`/alpha/${props.Countries.alpha3Code}`} className='link'>
+  
     <div className="card" style={props.Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
+        <Link to={`/alpha/${props.Countries.alpha3Code}`} className='link' style={props.Dark?{color:'#fff'}:{}}>
         <div className='card-image-container'><img src={props.Flag} alt="" /></div>
-        <div className="card-details">
-           <div className="country-card-Name">
+          <div className="card-details">
+            <div className="country-card-Name">
             <h4>{props.Name}</h4>
-           </div>
+            </div>
            <p><span className='card-bold-p-text'>Population: </span>{props.Population}</p>
            <p><span className='card-bold-p-text'>Region: </span>{props.Region}</p>
            <p><span className='card-bold-p-text'>Capital: </span>{props.Capital}</p>
         </div>
-      
+        </Link>
     </div>
-    </Link>
+  
   )
 }
 

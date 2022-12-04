@@ -7,11 +7,6 @@ interface FilterProps{
 }
 
 
-
-const style={
-    fontSize:'1em',
-    paddingTop:'0.3em'
-}
 const Filter = ({OnSelect,Dark}:FilterProps) => {
     const countries:string[]=['Africa','Americas','Asia','Europe','Oceania']
     const filt=useRef<HTMLDivElement>(null);
@@ -48,7 +43,7 @@ const Filter = ({OnSelect,Dark}:FilterProps) => {
     <div className="filter" ref={filt} onClick={handleToggle}>
         <div className="select" style={Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>
             <span className='filterText' ref={firstChild}>Filter by Region</span>
-            <span className="select-btn"><ExpandMoreIcon style={style}/></span>
+            <span className="material-symbols-outlined select-btn">expand_more</span>
         </div>
         <div className="content">
         <ul className='options' style={Dark?{backgroundColor:'#2B3844', color:'#fff'}:{}}>

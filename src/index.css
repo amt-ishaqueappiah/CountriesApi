@@ -32,8 +32,8 @@ body{
   }
   .bottom{
     display: grid;
-    grid-template-columns: repeat(3,25vw); 
-    column-gap: 6vw ;
+    grid-template-columns: repeat(3,27vw); 
+    column-gap: 4vw ;
   }
   
   
@@ -57,11 +57,12 @@ body{
 
   /* card decoration large phones*/
   .card{
-    width: 25vw;
-    height: 30vw;
+    width: 27vw;
+    height: 33vw;
+    margin-top: 3.9vw;
   }
   .card-image-container{
-    width:  25vw;
+    width:  27vw;
     height: 16vw;
     margin-bottom: 3vw;
   }
@@ -83,11 +84,85 @@ body{
     padding-bottom: 8vw;
   }
   
+ 
+
   .card-details p{
-    font-size: 1.5vw;
+    font-size: 1.4vw;
+    line-height: 1.7;
   }
 
+  .card-details{
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 2vw;
 
+}
+
+.filter{
+  width: 19vw;
+}
+
+.filter.active .content{
+  position:absolute;
+}
+ 
+.select{
+  display: flex;
+  position: relative;
+  width: 19vw;
+  padding: 1.5vw 0;
+  
+}
+
+.select-btn{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  padding-right: 3vw;
+  right: 0;
+  font-size: 1.4vw;
+}
+
+.filterText{
+  font-size: 1.5vw;
+  padding-left: 1vw;
+}
+
+.options li{
+  height: 2vw;
+  font-size: 1.5vw;
+}
+
+.options{
+  width: 19vw;
+}
+
+.search input{
+  width: 90vw;
+  padding: 1.4vw 4vw;
+  border-radius: 6px;
+
+}
+
+.search-btn{
+  padding: 1vw 0;
+  padding-left: 3vw;
+
+ }
+
+ ::placeholder{
+  font-size: 2vw;
+  padding-left: 7vw;
+}
+.search input:focus{
+  padding-left: 10vw;
+}
+.search{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+}
 }
 
 
@@ -102,7 +177,7 @@ body{
     align-items: center;
   }
   .top{
-    margin-top: 3vw;
+    margin-top: 3.9vw;
     grid-column: 1/-1;
     display: grid; 
     column-gap: 20.5vw;
@@ -121,7 +196,7 @@ body{
  
 .filterText{
   font-size: 1vw;
-  padding-left: 1vw;
+  padding-left: 1.5vw;
 }
 .select-btn{
   position: absolute;
@@ -131,8 +206,8 @@ body{
 .select{
   display: flex;
   position: relative;
-  width: 15vw;
-  padding: 1vw 0;
+  width: 14.6vw;
+  padding: 1.4vw 0;
   border-radius: 5px;
 }
 .search{
@@ -140,17 +215,19 @@ body{
 }
   .options{
     margin-top: 0.5em;
-    width: 15vw;
+    width: 14.6vw;
   }
   .options li{
+    padding-left: 0.3vw;
     height: 2vw;
     font-size: 1vw;
   }
 
 
   .search input{
-    width: 33vw;
-    padding: 1vw 5vw;
+    width: 36vw;
+    padding: 1.4vw 4vw;
+    border-radius: 6px;
 
   }
 
@@ -170,16 +247,16 @@ body{
   }
   
   .card{
-    width: 19vw;
-    height:24vw;
+    width: 20vw;
+    height:25vw;
     border-radius: 5px;
-    margin-top: 3vw;
+    margin-top: 3.9vw;
   } 
 
   .bottom{
     display: grid;
-    column-gap: 4.3vw;
-    grid-template-columns: repeat(4,19vw); 
+    column-gap: 4vw;
+    grid-template-columns: repeat(4,20vw); 
   }
 
   /* country page styling desktop (back-page)*/
@@ -285,9 +362,9 @@ body{
   /*card-styling */
 
   .card-image-container{
-    width:  19vw;
-    height: 13vw;
-    margin-bottom: 1.5vw;
+    width:  20vw;
+    height: 12vw;
+    margin-bottom: 1.8vw;
   }
 
   .card img{
@@ -296,17 +373,23 @@ body{
     object-fit: stretch;
   }
   .country-card-Name>h4{
-    margin-bottom: 0.6vw;
+    margin-bottom: 0.8vw;
     line-height: 1;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
   }
 
   .card-details p{
     font-size: 1vw;
+    line-height: 1.7;
   }
+
+  .card-details{
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 2vw;
 
 }
 
 
-
+}
 
