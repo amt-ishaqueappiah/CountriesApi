@@ -48,7 +48,7 @@ const Home = (props:homeProps) => {
   },[])
 
 
-  const allCountries:any = countries?.filter((value)=>{
+  const allCountries = countries?.filter((value)=>{
     if(searchCountry===''){
       return value
     }

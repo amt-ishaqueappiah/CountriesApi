@@ -13,7 +13,7 @@ function getSavedValue<T>(key:string,initialValue:T){
 }
 
 
-export default function useLocalStorage(key:any,initialValue:any){
+export default function useLocalStorage(key:string,initialValue:boolean){
     const[value,setValue]= useState(()=>{
         return getSavedValue(key,initialValue)
     })

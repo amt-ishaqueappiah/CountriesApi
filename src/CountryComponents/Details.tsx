@@ -19,11 +19,14 @@ interface DetailsProp{
 }
 
 
-
+type DetailsInfo={
+  name:string,
+  alpha3Code:number,
+}
     
 
 const Details = (props:DetailsProp) => {
-  const[info,setInfo]=useState<any[]>([])
+  const[info,setInfo]=useState<DetailsInfo[]>([])
 
   const countriesData=async()=>{
       try{
