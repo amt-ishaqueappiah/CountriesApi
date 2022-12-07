@@ -9,9 +9,24 @@ interface homeProps{
   Dark:boolean;
 }
 
+type country ={
+  name:string,
+  alpha3Code:number,
+  flags:string | any ,
+  region:string,
+  population:string,
+  capital:string
+
+}
+
+
+
+
 const Home = (props:homeProps) => {
-  const [countries, setCountries]=useState<any[]>([]);
+  const [countries, setCountries]=useState<country[]>([]);
   const [error,setError]=useState<boolean>(false);
+
+  const [searchCountry, setSearchCountry]=useState<string>('')
 
   const getCountries=async()=>{
     try{
@@ -33,7 +48,14 @@ const Home = (props:homeProps) => {
   },[])
 
 
-  const allCountries:any = countries.map(country=>{
+  const allCountries:any = countries?.filter((value)=>{
+    if(searchCountry===''){
+      return value
+    }
+    else if(value.name.toLowerCase().includes(searchCountry.toLowerCase())){
+      return value
+    }
+  }). map(country=>{
 
     return  <Card 
       Dark={props.Dark}
@@ -60,22 +82,11 @@ const Home = (props:homeProps) => {
       }
   }
 
-  const getCountryByName=async(countryName:string)=>{
-    try{
-      const res = await fetch(`${apiUrl}/name/${countryName}`)
-      if(!res.ok) throw new Error('country name not found'+setError(prev=>prev=true));
-      if(res.ok)setError(prev=>prev=false)
-      const data= await res.json()
-      setCountries(data)
-    }
-    catch(err){
-      console.log(err, 'country name error')
-    }
-  }
+ 
   return (
     <div className="home">
       <div className="top">
-      <Search Dark={props.Dark} OnChange={getCountryByName} Error={error}/>
+      <Search Dark={props.Dark} SetSearchCountry={setSearchCountry} Error={error}/>
       <Filter OnSelect={getCountryByRegion} Dark={props.Dark}/>
       </div>
       <div className="bottom" >

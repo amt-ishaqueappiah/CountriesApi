@@ -3,13 +3,12 @@ import NavBar from './components/NavBar'
 import {Routes,Route} from 'react-router-dom'
 import Home from './components/Home'
 import Country from './components/Country'
-import { useState } from 'react'
-
+import useLocalStorage from './useLocalStorage'
 
 
 function App () {
 
-  const [dark,setDark]=useState(false)
+  const [dark,setDark]=useLocalStorage('dark',false)
 
   return (
       <div className='app'>    

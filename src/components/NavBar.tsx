@@ -1,4 +1,4 @@
-import { style } from '@mui/system';
+
 import path from '../assets/Path.png'
 
 interface NavProps{
@@ -11,14 +11,15 @@ const NavBar = (props:NavProps) => {
 
   const changeColor =()=>{
     props.SetDark(!props.Dark)
-    if(props.Dark){
-      document.body.style.backgroundColor=' #fafafa'
   }
-  else{
-    document.body.style.backgroundColor='#202C36'
 
-  }
-  }
+  if(props.Dark){
+    document.body.style.backgroundColor='#202C36'
+}
+else{
+  document.body.style.backgroundColor=' #fafafa'
+
+}
   return (
     <nav className="Nav" style={props.Dark?{backgroundColor:'#2B3844',color:'white'}:{}}>
      <h4>Where in the world?</h4>

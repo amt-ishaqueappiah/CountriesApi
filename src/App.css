@@ -278,14 +278,15 @@ margin-bottom: 10vw;
 }
 
 .box{
-  width: 24vw;
+  min-width: 23vw;
+  width: fit-content;
   height: fit-content;
   border-radius: 2px;
   text-align: center;
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
   line-height: 1;
-  padding: 1.3vw 0;
+  padding: 1.3vw 0.2em;
 }
 
 .box.active{

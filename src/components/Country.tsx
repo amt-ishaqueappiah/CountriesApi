@@ -12,9 +12,10 @@ interface countryProps{
 const Country = (props:countryProps) => {
     const style = {  fontSize: "1.5em" }
 
+  
     const [country,setCountry] =useState<{name: string; flag: string; nativeName:string;
       population:string; region:string; subregion:string; capital:string; 
-      topLevelDomain:[];  currencies:{}[]; borders:[]; languages:{}[];
+      topLevelDomain:[];  currencies:{}[]; borders:[]; languages:{}[]; 
 
 
       }>({
@@ -37,10 +38,11 @@ const Country = (props:countryProps) => {
         iso639_2:"",
         name:"",
         nativeName:""
-      }]
-     
+      }],
+
 
     });
+  
     const {code}= useParams()
  
 
@@ -52,6 +54,7 @@ const Country = (props:countryProps) => {
       setCountry(country)
     }
 
+ 
     
 
     useEffect(()=>{
@@ -71,7 +74,7 @@ const Country = (props:countryProps) => {
         <Details Name={country.name} Img={country.flag} Native={country.nativeName}
           Population={country.population} Region={country.region} SubRegion={country.subregion}
           Capital={country.capital} TopLevel={country.topLevelDomain}  Currency={country.currencies} 
-          Languages={country.languages} Borders={country.borders} Dark={props.Dark}
+          Languages={country.languages}  Borders={country.borders} Dark={props.Dark}
         />
     </div>
   )
