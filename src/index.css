@@ -287,7 +287,9 @@ body{
 
   .border-details{
     gap: 0.5vw 0.7vw;
-    margin-left: 0.4vw;
+    margin-left: 10em;
+    display: flex;
+    position: absolute;
   }
 
   .Details{
@@ -299,12 +301,16 @@ body{
 
   .border-countries >h4{
     width: 130px;
-    align-self: center;
     white-space: nowrap;
+    position: absolute;
+    margin-top: 0.35vw;
+   
   }
  
   .border-countries{
     display: flex;
+    position: relative;
+   
   }
   .border-header{
     margin: 0;
