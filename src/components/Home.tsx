@@ -12,7 +12,10 @@ interface homeProps{
 type country ={
   name:string,
   alpha3Code:number,
-  flags:string | any ,
+  flags: {
+    svg:string,
+    png:string
+  },
   region:string,
   population:string,
   capital:string

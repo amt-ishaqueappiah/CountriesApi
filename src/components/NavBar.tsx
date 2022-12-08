@@ -1,6 +1,7 @@
 
 import path from '../assets/Path.png'
 
+
 interface NavProps{
   Dark:boolean;
   SetDark:any;
