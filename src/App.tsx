@@ -8,10 +8,6 @@ import useLocalStorage from './useLocalStorage'
 
 function App () {
 
-  type local={
-    value:boolean,
-    setValue:boolean
-}
   const [dark,setDark]=useLocalStorage('dark',false)
 
   return (

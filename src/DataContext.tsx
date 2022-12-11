@@ -4,19 +4,27 @@ import { apiUrl } from './api';
 
 
 
-
 type country ={
-    name:string,
-    alpha3Code:string,
-    flags: {
-      svg:string,
-      png:string
-    },
-    region:string,
-    population:string,
-    capital:string
-  
-  }
+  name:string,
+  alpha3Code:string,
+  flags: {
+    svg:string,
+    png:string
+  },
+  flag:string,
+  region:string,
+  population:string,
+  capital:string,
+  borders:[],
+  currencies:{}[],
+  subregion:string,
+  topLevelDomain:[],
+  languages:{}[],
+  nativeName:string
+
+}
+
+
 
   type ThemeContextProviderProps={
     children: React.ReactNode

@@ -2,7 +2,6 @@ import Card from "../HomeComponents/Card"
 import Filter from "../HomeComponents/Filter"
 import Search from "../HomeComponents/Search"
 import { useEffect, useState,useContext } from "react";
-import { apiUrl } from "../api";
 import { DataContext } from "../DataContext";
 
 interface homeProps{

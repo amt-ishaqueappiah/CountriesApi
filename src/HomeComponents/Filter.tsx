@@ -1,4 +1,3 @@
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useRef} from 'react';
 
 interface FilterProps{
