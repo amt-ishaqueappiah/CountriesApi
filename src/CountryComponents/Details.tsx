@@ -1,5 +1,6 @@
-import {useState,useEffect} from 'react'
-import { apiUrl } from '../api';
+import {useState,useEffect, useContext} from 'react'
+import { DataContext } from "../DataContext";
+
 
 interface DetailsProp{
   Name:string;
@@ -19,34 +20,14 @@ interface DetailsProp{
 }
 
 
-type DetailsInfo={
-  name:string,
-  alpha3Code:number,
-}
     
 
 const Details = (props:DetailsProp) => {
-  const[info,setInfo]=useState<DetailsInfo[]>([])
-
-  const countriesData=async()=>{
-      try{
-        const res = await fetch(`${apiUrl}/all`)
-        if(!res.ok) throw new Error('Data recovery not succesfull')
-        const data =await res.json()
-        setInfo(data)
-      }
-
-      catch(err){
-        console.log(err ,' error occured')
-        
-      }
-  }
-
-  useEffect(()=>{
-    countriesData()
-  },[])
+  const data= useContext(DataContext)
+ 
 
 
+ 
   return (
     <div className="Details">
     <div className="backFlag">
@@ -89,7 +70,7 @@ const Details = (props:DetailsProp) => {
               {props.Borders?.map(item=>{
                 return  item
                 }).map((border,index)=>{
-                  return <p key={index} className={props.Dark? 'box active':'box'}>{info.map((item)=>{if(item.alpha3Code===border){
+                  return <p key={index} className={props.Dark? 'box active':'box'}>{data.map((item)=>{if(item.alpha3Code===border){
                     return item.name
                   }})}</p>
                 })}

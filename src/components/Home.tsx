@@ -1,9 +1,9 @@
 import Card from "../HomeComponents/Card"
 import Filter from "../HomeComponents/Filter"
 import Search from "../HomeComponents/Search"
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { apiUrl } from "../api";
-
+import { DataContext } from "../DataContext";
 
 interface homeProps{
   Dark:boolean;
@@ -11,7 +11,7 @@ interface homeProps{
 
 type country ={
   name:string,
-  alpha3Code:number,
+  alpha3Code:string,
   flags: {
     svg:string,
     png:string
@@ -26,30 +26,18 @@ type country ={
 
 
 const Home = (props:homeProps) => {
-  const [countries, setCountries]=useState<country[]>([]);
+  const data= useContext(DataContext)
+
   const [error,setError]=useState<boolean>(false);
 
   const [searchCountry, setSearchCountry]=useState<string>('')
 
-  const getCountries=async()=>{
-    try{
-        const responds = await fetch(`${apiUrl}/all`)
-        if(!responds.ok) throw new Error('Data recovery not succesfull')
-       
-        const data =await responds.json()
-        setCountries(data)
-    }
-    catch(err){
-      console.log(err ,' error occured')
-      
-      
-    }
-  }
+  const [countries, setCountries]=useState<country[]>([]);
+  
 
   useEffect(()=>{
-    getCountries();
-  },[])
-
+    setCountries(data)
+  },[data])
 
   const allCountries = countries?.filter((value)=>{
     if(searchCountry===''){
@@ -73,16 +61,16 @@ const Home = (props:homeProps) => {
       
   })
 
-  const getCountryByRegion=async(regionName:string)=>{
-      try{
-        const res =await fetch(`${apiUrl}/region/${regionName}`)
-        if(!res.ok) throw new Error('Region retrieval Error')
-        const data = await res.json()
-        setCountries(data)
-
-      }catch(error){
-        console.log('Network Error')
+  const getCountryByRegion=(regionName:string)=>{
+     
+    const regionData= data.filter((region)=>{
+      if(region.region===regionName){
+        return region
       }
+    })
+        setCountries(regionData)
+
+    
   }
 
  
