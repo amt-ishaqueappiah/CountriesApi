@@ -1,5 +1,7 @@
 import { useContext} from 'react'
 import { DataContext } from "../DataContext";
+import {Link} from 'react-router-dom';
+
 
 
 interface DetailsProp{
@@ -71,7 +73,7 @@ const Details = (props:DetailsProp) => {
                 return  item
                 }).map((border,index)=>{
                   return <p key={index} className={props.Dark? 'box active':'box'}>{data.map((item)=>{if(item.alpha3Code===border){
-                    return item.name
+                    return  <Link to={`/alpha/${item.alpha3Code}`} className='link' style={props.Dark?{color:'#fff'}:{}}>{item.name}</Link>
                   }})}</p>
                 })}
             </div>

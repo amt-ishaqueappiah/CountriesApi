@@ -40,11 +40,11 @@ body{
 
   /*back*/
   .info p{
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
 
   .border-header{
-    font-size: 4.2vw;
+    font-size: 4vw;
   }
 
   .border-details{
@@ -54,6 +54,9 @@ body{
     font-size: 6vw;
   }
 
+  .box{
+    cursor: pointer;
+  }
 
   /* card decoration large phones*/
   .card{
